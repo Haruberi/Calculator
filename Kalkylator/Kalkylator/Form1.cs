@@ -19,6 +19,8 @@ namespace Kalkylator
 
         private void num01_Click(object sender, EventArgs e)
         {
+            if (showNumberBox.Text == "0")
+                showNumberBox.Clear();
             Button button=(Button)sender;
             showNumberBox.Text = showNumberBox.Text + button.Text;
         }

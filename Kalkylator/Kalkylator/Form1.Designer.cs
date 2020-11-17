@@ -59,6 +59,7 @@ namespace Kalkylator
             this.showNumberBox.ReadOnly = true;
             this.showNumberBox.Size = new System.Drawing.Size(298, 45);
             this.showNumberBox.TabIndex = 0;
+            this.showNumberBox.Text = "0";
             this.showNumberBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // num07
