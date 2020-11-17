@@ -48,13 +48,14 @@ namespace Kalkylator
             this.multiplyButton = new System.Windows.Forms.Button();
             this.divideButton = new System.Windows.Forms.Button();
             this.equalButton = new System.Windows.Forms.Button();
+            this.labelCurrOperation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // showNumberBox
             // 
             this.showNumberBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.showNumberBox.Font = new System.Drawing.Font("Courier New", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showNumberBox.Location = new System.Drawing.Point(13, 13);
+            this.showNumberBox.Location = new System.Drawing.Point(13, 55);
             this.showNumberBox.Name = "showNumberBox";
             this.showNumberBox.ReadOnly = true;
             this.showNumberBox.Size = new System.Drawing.Size(298, 45);
@@ -66,7 +67,7 @@ namespace Kalkylator
             // 
             this.num07.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num07.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num07.Location = new System.Drawing.Point(17, 87);
+            this.num07.Location = new System.Drawing.Point(17, 132);
             this.num07.Name = "num07";
             this.num07.Size = new System.Drawing.Size(54, 53);
             this.num07.TabIndex = 1;
@@ -78,7 +79,7 @@ namespace Kalkylator
             // 
             this.num08.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num08.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num08.Location = new System.Drawing.Point(77, 87);
+            this.num08.Location = new System.Drawing.Point(77, 132);
             this.num08.Name = "num08";
             this.num08.Size = new System.Drawing.Size(54, 53);
             this.num08.TabIndex = 2;
@@ -90,7 +91,7 @@ namespace Kalkylator
             // 
             this.num09.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num09.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num09.Location = new System.Drawing.Point(137, 87);
+            this.num09.Location = new System.Drawing.Point(137, 132);
             this.num09.Name = "num09";
             this.num09.Size = new System.Drawing.Size(54, 53);
             this.num09.TabIndex = 3;
@@ -102,51 +103,55 @@ namespace Kalkylator
             // 
             this.AddButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.AddButton.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.Location = new System.Drawing.Point(197, 146);
+            this.AddButton.Location = new System.Drawing.Point(197, 191);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(54, 53);
             this.AddButton.TabIndex = 13;
             this.AddButton.Text = "+";
             this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.operator_click);
             // 
             // subtractButton
             // 
             this.subtractButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.subtractButton.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtractButton.Location = new System.Drawing.Point(197, 87);
+            this.subtractButton.Location = new System.Drawing.Point(197, 132);
             this.subtractButton.Name = "subtractButton";
             this.subtractButton.Size = new System.Drawing.Size(54, 53);
             this.subtractButton.TabIndex = 12;
             this.subtractButton.Text = "-";
             this.subtractButton.UseVisualStyleBackColor = false;
+            this.subtractButton.Click += new System.EventHandler(this.operator_click);
             // 
             // CEButton
             // 
             this.CEButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CEButton.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CEButton.Location = new System.Drawing.Point(257, 146);
+            this.CEButton.Location = new System.Drawing.Point(257, 191);
             this.CEButton.Name = "CEButton";
             this.CEButton.Size = new System.Drawing.Size(54, 53);
             this.CEButton.TabIndex = 16;
             this.CEButton.Text = "CE";
             this.CEButton.UseVisualStyleBackColor = false;
+            this.CEButton.Click += new System.EventHandler(this.CEbutton_click);
             // 
             // CButton
             // 
             this.CButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CButton.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CButton.Location = new System.Drawing.Point(257, 87);
+            this.CButton.Location = new System.Drawing.Point(257, 132);
             this.CButton.Name = "CButton";
             this.CButton.Size = new System.Drawing.Size(54, 53);
             this.CButton.TabIndex = 15;
             this.CButton.Text = "C";
             this.CButton.UseVisualStyleBackColor = false;
+            this.CButton.Click += new System.EventHandler(this.Cbutton_click);
             // 
             // num06
             // 
             this.num06.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num06.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num06.Location = new System.Drawing.Point(137, 146);
+            this.num06.Location = new System.Drawing.Point(137, 191);
             this.num06.Name = "num06";
             this.num06.Size = new System.Drawing.Size(54, 53);
             this.num06.TabIndex = 21;
@@ -158,7 +163,7 @@ namespace Kalkylator
             // 
             this.num05.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num05.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num05.Location = new System.Drawing.Point(77, 146);
+            this.num05.Location = new System.Drawing.Point(77, 191);
             this.num05.Name = "num05";
             this.num05.Size = new System.Drawing.Size(54, 53);
             this.num05.TabIndex = 20;
@@ -170,7 +175,7 @@ namespace Kalkylator
             // 
             this.num04.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num04.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num04.Location = new System.Drawing.Point(17, 146);
+            this.num04.Location = new System.Drawing.Point(17, 191);
             this.num04.Name = "num04";
             this.num04.Size = new System.Drawing.Size(54, 53);
             this.num04.TabIndex = 19;
@@ -182,7 +187,7 @@ namespace Kalkylator
             // 
             this.num03.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num03.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num03.Location = new System.Drawing.Point(137, 205);
+            this.num03.Location = new System.Drawing.Point(137, 250);
             this.num03.Name = "num03";
             this.num03.Size = new System.Drawing.Size(54, 53);
             this.num03.TabIndex = 24;
@@ -194,7 +199,7 @@ namespace Kalkylator
             // 
             this.num02.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num02.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num02.Location = new System.Drawing.Point(77, 205);
+            this.num02.Location = new System.Drawing.Point(77, 250);
             this.num02.Name = "num02";
             this.num02.Size = new System.Drawing.Size(54, 53);
             this.num02.TabIndex = 23;
@@ -206,7 +211,7 @@ namespace Kalkylator
             // 
             this.num01.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num01.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num01.Location = new System.Drawing.Point(17, 205);
+            this.num01.Location = new System.Drawing.Point(17, 250);
             this.num01.Name = "num01";
             this.num01.Size = new System.Drawing.Size(54, 53);
             this.num01.TabIndex = 22;
@@ -218,7 +223,7 @@ namespace Kalkylator
             // 
             this.commaButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.commaButton.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.commaButton.Location = new System.Drawing.Point(137, 264);
+            this.commaButton.Location = new System.Drawing.Point(137, 309);
             this.commaButton.Name = "commaButton";
             this.commaButton.Size = new System.Drawing.Size(54, 53);
             this.commaButton.TabIndex = 25;
@@ -230,7 +235,7 @@ namespace Kalkylator
             // 
             this.num0.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.num0.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num0.Location = new System.Drawing.Point(17, 266);
+            this.num0.Location = new System.Drawing.Point(17, 311);
             this.num0.Name = "num0";
             this.num0.Size = new System.Drawing.Size(114, 53);
             this.num0.TabIndex = 26;
@@ -242,34 +247,48 @@ namespace Kalkylator
             // 
             this.multiplyButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.multiplyButton.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiplyButton.Location = new System.Drawing.Point(197, 205);
+            this.multiplyButton.Location = new System.Drawing.Point(197, 250);
             this.multiplyButton.Name = "multiplyButton";
             this.multiplyButton.Size = new System.Drawing.Size(54, 53);
             this.multiplyButton.TabIndex = 27;
             this.multiplyButton.Text = "*";
             this.multiplyButton.UseVisualStyleBackColor = false;
+            this.multiplyButton.Click += new System.EventHandler(this.operator_click);
             // 
             // divideButton
             // 
             this.divideButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.divideButton.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.divideButton.Location = new System.Drawing.Point(197, 266);
+            this.divideButton.Location = new System.Drawing.Point(197, 311);
             this.divideButton.Name = "divideButton";
             this.divideButton.Size = new System.Drawing.Size(54, 53);
             this.divideButton.TabIndex = 28;
             this.divideButton.Text = "/";
             this.divideButton.UseVisualStyleBackColor = false;
+            this.divideButton.Click += new System.EventHandler(this.operator_click);
             // 
             // equalButton
             // 
             this.equalButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.equalButton.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equalButton.Location = new System.Drawing.Point(257, 205);
+            this.equalButton.Location = new System.Drawing.Point(257, 250);
             this.equalButton.Name = "equalButton";
             this.equalButton.Size = new System.Drawing.Size(54, 112);
             this.equalButton.TabIndex = 29;
             this.equalButton.Text = "=";
             this.equalButton.UseVisualStyleBackColor = false;
+            this.equalButton.Click += new System.EventHandler(this.equalbutton_click);
+            // 
+            // labelCurrOperation
+            // 
+            this.labelCurrOperation.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.labelCurrOperation.AutoSize = true;
+            this.labelCurrOperation.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCurrOperation.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.labelCurrOperation.Location = new System.Drawing.Point(13, 13);
+            this.labelCurrOperation.Name = "labelCurrOperation";
+            this.labelCurrOperation.Size = new System.Drawing.Size(0, 27);
+            this.labelCurrOperation.TabIndex = 30;
             // 
             // CalculatorForm
             // 
@@ -277,6 +296,7 @@ namespace Kalkylator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(338, 389);
+            this.Controls.Add(this.labelCurrOperation);
             this.Controls.Add(this.equalButton);
             this.Controls.Add(this.divideButton);
             this.Controls.Add(this.multiplyButton);
@@ -328,6 +348,7 @@ namespace Kalkylator
         private System.Windows.Forms.Button multiplyButton;
         private System.Windows.Forms.Button divideButton;
         private System.Windows.Forms.Button equalButton;
+        private System.Windows.Forms.Label labelCurrOperation;
     }
 }
 
