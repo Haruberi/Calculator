@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Kalkylator
 {
-    public partial class Form1 : Form
+    public partial class CalculatorForm : Form
     {
-        public Form1()
+        public CalculatorForm()
         {
             InitializeComponent();
+        }
+
+        private void num01_Click(object sender, EventArgs e)
+        {
+            showNumberBox.Text = showNumberBox.Text + "1";
         }
     }
 }
