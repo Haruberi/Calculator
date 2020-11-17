@@ -71,6 +71,7 @@ namespace Kalkylator
             this.num07.TabIndex = 1;
             this.num07.Text = "7";
             this.num07.UseVisualStyleBackColor = false;
+            this.num07.Click += new System.EventHandler(this.num01_Click);
             // 
             // num08
             // 
@@ -82,6 +83,7 @@ namespace Kalkylator
             this.num08.TabIndex = 2;
             this.num08.Text = "8";
             this.num08.UseVisualStyleBackColor = false;
+            this.num08.Click += new System.EventHandler(this.num01_Click);
             // 
             // num09
             // 
@@ -93,6 +95,7 @@ namespace Kalkylator
             this.num09.TabIndex = 3;
             this.num09.Text = "9";
             this.num09.UseVisualStyleBackColor = false;
+            this.num09.Click += new System.EventHandler(this.num01_Click);
             // 
             // AddButton
             // 
@@ -148,6 +151,7 @@ namespace Kalkylator
             this.num06.TabIndex = 21;
             this.num06.Text = "6";
             this.num06.UseVisualStyleBackColor = false;
+            this.num06.Click += new System.EventHandler(this.num01_Click);
             // 
             // num05
             // 
@@ -159,6 +163,7 @@ namespace Kalkylator
             this.num05.TabIndex = 20;
             this.num05.Text = "5";
             this.num05.UseVisualStyleBackColor = false;
+            this.num05.Click += new System.EventHandler(this.num01_Click);
             // 
             // num04
             // 
@@ -170,6 +175,7 @@ namespace Kalkylator
             this.num04.TabIndex = 19;
             this.num04.Text = "4";
             this.num04.UseVisualStyleBackColor = false;
+            this.num04.Click += new System.EventHandler(this.num01_Click);
             // 
             // num03
             // 
@@ -181,6 +187,7 @@ namespace Kalkylator
             this.num03.TabIndex = 24;
             this.num03.Text = "3";
             this.num03.UseVisualStyleBackColor = false;
+            this.num03.Click += new System.EventHandler(this.num01_Click);
             // 
             // num02
             // 
@@ -192,6 +199,7 @@ namespace Kalkylator
             this.num02.TabIndex = 23;
             this.num02.Text = "2";
             this.num02.UseVisualStyleBackColor = false;
+            this.num02.Click += new System.EventHandler(this.num01_Click);
             // 
             // num01
             // 
@@ -215,6 +223,7 @@ namespace Kalkylator
             this.commaButton.TabIndex = 25;
             this.commaButton.Text = ".";
             this.commaButton.UseVisualStyleBackColor = false;
+            this.commaButton.Click += new System.EventHandler(this.num01_Click);
             // 
             // num0
             // 
@@ -226,6 +235,7 @@ namespace Kalkylator
             this.num0.TabIndex = 26;
             this.num0.Text = "0";
             this.num0.UseVisualStyleBackColor = false;
+            this.num0.Click += new System.EventHandler(this.num01_Click);
             // 
             // multiplyButton
             // 
